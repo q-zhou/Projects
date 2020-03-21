@@ -2,12 +2,7 @@
 Originally, there are 20,640 rows. Through checking missing values, 207 rows were dropped out and the retained 20,433 entries comprise both of the training and validation datasets. Overall, target variable exhibits good patterns with few outliers and concentrate most values between Quartile 1 and Quartile 3 (see Exhibit 1) while some of the independent variables are more dispersed, such as the median income column (see Exhibit 2). 
 
 #### Model Fitting
-I tried three DNN models, each with a set of parameters whose values are given below:
-         Number of layers	Size of layers	Value of dropout
-Model 1	       4	             32	              0.2
-Model 2	       5	             64	              0.5
-Model 3	       6	             16	              0.3
-Model 2 has the highest degree of intricacy for the model architecture. In case of overfitting, I intentionally reduced the complexity of Model 1 and Model 3. Across the three models, I populated a batch size of 10 and epoch size of 50 for consistency considerations. 
+I tried three DNN models, each with a set of parameters whose values are given below: 1) Model 1: 4 layers, 32 hidden units, 0.2 dropout; 2) Model 2: 5 layers, 64 hidden units, 0.5 dropout; 3) Model 3: 6 layers, 16 hidden units, 0.3 dropout. Model 2 has the highest degree of intricacy for the model architecture. In case of overfitting, I intentionally reduced the complexity of Model 1 and Model 3. Across the three models, I populated a batch size of 10 and epoch size of 50 for consistency considerations. 
 
 #### Regression Results
 As shown in Exhibit 3, Model 2 is the optimal since it turned out the lowest value for both MAE and RSME. This result has been further evidenced by the scatterplots of the training and validation data (see Exhibit 4). Following Model 2, Model 3 seems to outperform Model 1 by the quantitative standards of MAE and RMSE, but quite to my surprise, Model 1 has much more beautiful plot graph than Model 3 does.
